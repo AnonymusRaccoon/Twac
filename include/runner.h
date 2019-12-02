@@ -5,6 +5,10 @@
 ** runner
 */
 
-#define ERROR 84
+#pragma once
 
- int start_game();
+#define ERROR 84
+#include "scene.h"
+
+int start_game(void);
+gc_scene *create_game_scene(void);

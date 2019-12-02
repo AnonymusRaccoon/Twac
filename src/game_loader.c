@@ -6,11 +6,16 @@
 */
 
 #include "engine.h"
+#include "runner.h"
 
-int start_game()
+int start_game(void)
 {
-    gcEngine *engine = create_engine("Runner");
+    gc_engine *engine = engine_create("Runner");
+    gc_scene *scene = create_game_scene();
 
+    if (!engine || !scene)
+        return (ERROR);
+    engine->change_scene(engine, scene);
     while (engine->is_open(engine)) {
         engine->game_loop(engine);
     }

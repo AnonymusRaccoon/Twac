@@ -8,7 +8,7 @@
 #include "runner.h"
 #include "my.h"
 
-int usage()
+int usage(void)
 {
     return (ERROR);
 }
