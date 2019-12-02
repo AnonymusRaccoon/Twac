@@ -16,5 +16,7 @@ gc_scene *create_game_scene(void)
 {
     gc_scene *scene = scene_create(textures);
 
+    if (!scene)
+        return (NULL);
     return (scene);
 }
