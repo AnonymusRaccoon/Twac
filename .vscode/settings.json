@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "position_component.h": "c",
+        "movable_component.h": "c"
+    }
+}

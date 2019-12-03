@@ -1,0 +1,4 @@
+0:
+PositionComponent 0,0
+MovableComponent Q D Z
+TextureRenderer assets/sprites/bck_layer1.png
