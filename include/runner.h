@@ -11,4 +11,4 @@
 #include "scene.h"
 
 int start_game(void);
-gc_scene *create_game_scene(gc_engine *engine);
+int create_game_scene(gc_engine *engine);
