@@ -9,9 +9,13 @@
 #include "prefab.h"
 #include <stddef.h>
 
-static const char *textures[] = {"assets/sprites/bck_layer1.png", \
-"assets/sprites/bck_layer2.png", "assets/sprites/bck_layer3.png", \
-"assets/sprites/bck_layer4.png", NULL};
+static const char *textures[] = {
+    "assets/sprites/bck_layer1.png",
+    "assets/sprites/bck_layer2.png",
+    "assets/sprites/bck_layer3.png",
+    "assets/sprites/bck_layer4.png", 
+    NULL
+};
 
 int create_game_scene(gc_engine *engine)
 {
