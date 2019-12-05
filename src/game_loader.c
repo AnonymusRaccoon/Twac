@@ -19,5 +19,6 @@ int start_game(void)
     while (engine->is_open(engine)) {
         engine->game_loop(engine);
     }
+    engine->destroy(engine);
     return (0);
 }
