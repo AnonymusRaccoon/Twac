@@ -10,7 +10,7 @@
 
 int start_game(void)
 {
-    gc_engine *engine = engine_create("Runner");
+    gc_engine *engine = engine_create("Runner", 60);
 
     if (!engine)
         return (ERROR);

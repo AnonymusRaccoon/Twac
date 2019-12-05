@@ -25,7 +25,7 @@ int create_game_scene(gc_engine *engine)
     if (!scene)
         return (-1);
     engine->change_scene(engine, scene);
-    entity = prefab_load(engine, "prefabs/player.gcprefab");
+    entity = prefab_load(engine, "prefabs/background.gcprefab");
     scene->add_entity(scene, entity);
     return (0);
 }
