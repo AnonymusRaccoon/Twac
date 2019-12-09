@@ -1,19 +1,12 @@
-Entity
-0:
-PositionComponent 0,0 800 600
-TextureRenderer assets/sprites/bck_layer4.png
-
-Entity
-0:
-PositionComponent 0,0 800 600
-TextureRenderer assets/sprites/bck_layer3.png
-
-Entity
-0:
-PositionComponent 0,0 800 600
-TextureRenderer assets/sprites/bck_layer2.png
-
-Entity
-0:
-PositionComponent 0,0 800 600
-TextureRenderer assets/sprites/bck_layer1.png
+<gc_group>
+    <gc_entity>
+        <TransformComponent>
+            <Position x="0" y="0" />
+            <Size x="800" y="600" />
+        </TransformComponent>
+        <TextureRenderer src="assets/sprites/bck_layer4.png">
+            <Rect height="auto" width="auto" top="0" left="0" /> 
+        </TextureRenderer>
+        <ParallaxComponent speed="0.1" />
+    </gc_entity>
+</gc_group>
