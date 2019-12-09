@@ -13,7 +13,7 @@ static const char *textures[] = {
     "assets/sprites/bck_layer1.png",
     "assets/sprites/bck_layer2.png",
     "assets/sprites/bck_layer3.png",
-    "assets/sprites/bck_layer4.png", 
+    "assets/sprites/bck_layer4.png",
     NULL
 };
 

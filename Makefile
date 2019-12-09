@@ -50,7 +50,7 @@ dbg: CFLAGS += -g
 dbg: clean $(OBJ)
 	$(MAKE) -C lib/gamacon dbg
 	$(MAKE) -C lib/my
-	$(MAKE) -C lib/xmlparser
+	$(MAKE) -C lib/xmlparser dbg
 	$(CC) -o $(NAME) $(OBJ) $(LDFLAGS)
 
 .PHONY: all build clean fclean ffclean
