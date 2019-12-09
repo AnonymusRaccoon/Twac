@@ -7,7 +7,7 @@
         <TextureRenderer src="assets/sprites/bck_layer4.png">
             <Rect height="auto" width="auto" top="0" left="0" /> 
         </TextureRenderer>
-        <ParallaxComponent speed="0.1" />
+        <ParallaxComponent speed="60" />
     </gc_entity>
     <gc_entity>
         <TransformComponent>
@@ -17,7 +17,7 @@
         <TextureRenderer src="assets/sprites/bck_layer3.png">
             <Rect height="auto" width="auto" top="0" left="0" /> 
         </TextureRenderer>
-        <ParallaxComponent speed="0.1" />
+        <ParallaxComponent speed="90" />
     </gc_entity>
     <gc_entity>
         <TransformComponent>
@@ -27,7 +27,7 @@
         <TextureRenderer src="assets/sprites/bck_layer2.png">
             <Rect height="auto" width="auto" top="0" left="0" /> 
         </TextureRenderer>
-        <ParallaxComponent speed="0.1" />
+        <ParallaxComponent speed="100" />
     </gc_entity>
     <gc_entity>
         <TransformComponent>
@@ -37,6 +37,6 @@
         <TextureRenderer src="assets/sprites/bck_layer1.png">
             <Rect height="auto" width="auto" top="0" left="0" /> 
         </TextureRenderer>
-        <ParallaxComponent speed="0.1" />
+        <ParallaxComponent speed="120" />
     </gc_entity>
 </gc_group>
