@@ -20,12 +20,10 @@ static const char *textures[] = {
 int create_game_scene(gc_engine *engine)
 {
     gc_scene *scene = scene_create(textures);
-    gc_entity *entity;
 
     if (!scene)
         return (-1);
     engine->change_scene(engine, scene);
-    entity = prefab_load(engine, "prefabs/background.gcprefab");
-    scene->add_entity(scene, entity);
+    prefab_load(engine, "prefabs/background.gcprefab");
     return (0);
 }
