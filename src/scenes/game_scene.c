@@ -14,6 +14,7 @@ static const char *textures[] = {
     "assets/sprites/bck_layer2.png",
     "assets/sprites/bck_layer3.png",
     "assets/sprites/bck_layer4.png",
+    "assets/sprites/grass.png",
     NULL
 };
 
@@ -24,6 +25,9 @@ int create_game_scene(gc_engine *engine)
     if (!scene)
         return (-1);
     engine->change_scene(engine, scene);
-    prefab_load(engine, "prefabs/background.gcprefab");
+    if (prefab_load(engine, "prefabs/game.gcprefab") < 0)
+        return (-1);
+    if (prefab_load(engine, "prefabs/player.gcprefab") < 0)
+        return (-1);
     return (0);
 }

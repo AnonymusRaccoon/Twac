@@ -5,9 +5,9 @@
                 <Position x="0" y="0" />
                 <Size x="800" y="600" />
             </TransformComponent>
-            <TextureRenderer src="assets/sprites/bck_layer4.png">
+            <Renderer src="assets/sprites/bck_layer4.png">
                 <Rect height="auto" width="auto" top="0" left="0" /> 
-            </TextureRenderer>
+            </Renderer>
             <ParallaxComponent speed="60" />
         </gc_entity>
         <gc_entity>
@@ -15,9 +15,9 @@
                 <Position x="0" y="0" />
                 <Size x="800" y="600" />
             </TransformComponent>
-            <TextureRenderer src="assets/sprites/bck_layer3.png">
+            <Renderer src="assets/sprites/bck_layer3.png">
                 <Rect height="auto" width="auto" top="0" left="0" /> 
-            </TextureRenderer>
+            </Renderer>
             <ParallaxComponent speed="90" />
         </gc_entity>
         <gc_entity>
@@ -25,9 +25,9 @@
                 <Position x="0" y="0" />
                 <Size x="800" y="600" />
             </TransformComponent>
-            <TextureRenderer src="assets/sprites/bck_layer2.png">
+            <Renderer src="assets/sprites/bck_layer2.png">
                 <Rect height="auto" width="auto" top="0" left="0" /> 
-            </TextureRenderer>
+            </Renderer>
             <ParallaxComponent speed="100" />
         </gc_entity>
         <gc_entity>
@@ -35,12 +35,29 @@
                 <Position x="0" y="0" />
                 <Size x="800" y="600" />
             </TransformComponent>
-            <TextureRenderer src="assets/sprites/bck_layer1.png">
+            <Renderer src="assets/sprites/bck_layer1.png">
                 <Rect height="auto" width="auto" top="0" left="0" /> 
-            </TextureRenderer>
+            </Renderer>
             <ParallaxComponent speed="120" />
         </gc_entity>
+        
+        <gc_entity>
+            <TransformComponent>
+                <Position x="200" y="500" />
+                <Size x="500" y="50" />
+            </TransformComponent>
+            <Renderer src="assets/sprites/grass.png">
+                <Rect height="auto" width="auto" top="0" left="0" /> 
+            </Renderer>
+        </gc_entity>
+        <gc_entity>
+            <TransformComponent>
+                <Position x="100" y="200" />
+                <Size x="100" y="300" />
+            </TransformComponent>
+            <Renderer src="assets/sprites/grass.png">
+                <Rect height="auto" width="auto" top="0" left="0" /> 
+            </Renderer>
+        </gc_entity>
     </gc_entities>
-    <map>
-    </map>
 </gc_scene>

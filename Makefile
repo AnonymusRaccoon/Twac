@@ -16,7 +16,7 @@ INCLUDE = -I ./include -I lib/gamacon/include -I lib/gamacon/lib/xmlparser/inclu
 CFLAGS = $(INCLUDE) -Wall -Wshadow -Wextra
 
 LDFLAGS = -L lib/gamacon -L lib/my -L lib/xmlparser \
--lgamacon -lxmlparser -lmy -lcsfml-system -lcsfml-graphics
+-lgamacon -lxmlparser -lmy -lcsfml-system -lcsfml-graphics -lcsfml-window
 
 NAME = my_runner
 
