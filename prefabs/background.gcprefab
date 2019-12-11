@@ -1,42 +1,46 @@
-<gc_group>
-    <gc_entity>
-        <TransformComponent>
-            <Position x="0" y="0" />
-            <Size x="800" y="600" />
-        </TransformComponent>
-        <TextureRenderer src="assets/sprites/bck_layer4.png">
-            <Rect height="auto" width="auto" top="0" left="0" /> 
-        </TextureRenderer>
-        <ParallaxComponent speed="60" />
-    </gc_entity>
-    <gc_entity>
-        <TransformComponent>
-            <Position x="0" y="0" />
-            <Size x="800" y="600" />
-        </TransformComponent>
-        <TextureRenderer src="assets/sprites/bck_layer3.png">
-            <Rect height="auto" width="auto" top="0" left="0" /> 
-        </TextureRenderer>
-        <ParallaxComponent speed="90" />
-    </gc_entity>
-    <gc_entity>
-        <TransformComponent>
-            <Position x="0" y="0" />
-            <Size x="800" y="600" />
-        </TransformComponent>
-        <TextureRenderer src="assets/sprites/bck_layer2.png">
-            <Rect height="auto" width="auto" top="0" left="0" /> 
-        </TextureRenderer>
-        <ParallaxComponent speed="100" />
-    </gc_entity>
-    <gc_entity>
-        <TransformComponent>
-            <Position x="0" y="0" />
-            <Size x="800" y="600" />
-        </TransformComponent>
-        <TextureRenderer src="assets/sprites/bck_layer1.png">
-            <Rect height="auto" width="auto" top="0" left="0" /> 
-        </TextureRenderer>
-        <ParallaxComponent speed="120" />
-    </gc_entity>
-</gc_group>
+<gc_scene>
+    <gc_entities>
+        <gc_entity>
+            <TransformComponent>
+                <Position x="0" y="0" />
+                <Size x="800" y="600" />
+            </TransformComponent>
+            <TextureRenderer src="assets/sprites/bck_layer4.png">
+                <Rect height="auto" width="auto" top="0" left="0" /> 
+            </TextureRenderer>
+            <ParallaxComponent speed="60" />
+        </gc_entity>
+        <gc_entity>
+            <TransformComponent>
+                <Position x="0" y="0" />
+                <Size x="800" y="600" />
+            </TransformComponent>
+            <TextureRenderer src="assets/sprites/bck_layer3.png">
+                <Rect height="auto" width="auto" top="0" left="0" /> 
+            </TextureRenderer>
+            <ParallaxComponent speed="90" />
+        </gc_entity>
+        <gc_entity>
+            <TransformComponent>
+                <Position x="0" y="0" />
+                <Size x="800" y="600" />
+            </TransformComponent>
+            <TextureRenderer src="assets/sprites/bck_layer2.png">
+                <Rect height="auto" width="auto" top="0" left="0" /> 
+            </TextureRenderer>
+            <ParallaxComponent speed="100" />
+        </gc_entity>
+        <gc_entity>
+            <TransformComponent>
+                <Position x="0" y="0" />
+                <Size x="800" y="600" />
+            </TransformComponent>
+            <TextureRenderer src="assets/sprites/bck_layer1.png">
+                <Rect height="auto" width="auto" top="0" left="0" /> 
+            </TextureRenderer>
+            <ParallaxComponent speed="120" />
+        </gc_entity>
+    </gc_entities>
+    <map>
+    </map>
+</gc_scene>
