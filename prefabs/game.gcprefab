@@ -2,7 +2,7 @@
     <gc_entities>
         <gc_entity>
             <TransformComponent>
-                <Position x="0" y="0" />
+                <Position x="0" y="600" />
                 <Size x="800" y="600" />
             </TransformComponent>
             <Renderer src="assets/sprites/bck_layer4.png">
@@ -12,7 +12,7 @@
         </gc_entity>
         <gc_entity>
             <TransformComponent>
-                <Position x="0" y="0" />
+                <Position x="0" y="600" />
                 <Size x="800" y="600" />
             </TransformComponent>
             <Renderer src="assets/sprites/bck_layer3.png">
@@ -22,7 +22,7 @@
         </gc_entity>
         <gc_entity>
             <TransformComponent>
-                <Position x="0" y="0" />
+                <Position x="0" y="600" />
                 <Size x="800" y="600" />
             </TransformComponent>
             <Renderer src="assets/sprites/bck_layer2.png">
@@ -32,7 +32,7 @@
         </gc_entity>
         <gc_entity>
             <TransformComponent>
-                <Position x="0" y="0" />
+                <Position x="0" y="600" />
                 <Size x="800" y="600" />
             </TransformComponent>
             <Renderer src="assets/sprites/bck_layer1.png">
@@ -43,7 +43,7 @@
         
         <gc_entity>
             <TransformComponent>
-                <Position x="200" y="500" />
+                <Position x="200" y="100" />
                 <Size x="500" y="50" />
             </TransformComponent>
             <Renderer src="assets/sprites/grass.png">
@@ -53,7 +53,7 @@
         </gc_entity>
         <gc_entity>
             <TransformComponent>
-                <Position x="100" y="200" />
+                <Position x="100" y="400" />
                 <Size x="100" y="300" />
             </TransformComponent>
             <Renderer src="assets/sprites/grass.png">
@@ -63,7 +63,7 @@
         </gc_entity>
         <gc_entity>
             <TransformComponent>
-                <Position x="700" y="200" />
+                <Position x="700" y="400" />
                 <Size x="100" y="300" />
             </TransformComponent>
             <Renderer src="assets/sprites/grass.png">
