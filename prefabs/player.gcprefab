@@ -9,9 +9,9 @@
         </renderer>
         <movable_component />
         <controllable_component />
-        <gravity_component speed="50" />
+        <gravity_component speed="500" />
         <keyboard_controller left="16" right="3" jump="57" />
-        <walk_action speed="14000" max_speed="500" max_acceleration="14000" />
-        <friction_component value="1500" />
+        <walk_action acceleration="1250" max_acceleration="750" />
+        <friction_component value="750" />
     </gc_entity>
 </gc_entities>
