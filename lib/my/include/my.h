@@ -6,9 +6,13 @@
 */
 #pragma once
 
-int count_valid_queens_placements(int n);
+int my_printf(const char *str, ...);
 
-char *my_strchr(const char *str, char c);
+void print_ptr(void *ptr);
+
+void print_str_to(char *ptr, int max);
+
+int count_valid_queens_placements(int n);
 
 int my_compute_power_it(int n, int p);
 
@@ -18,7 +22,7 @@ int my_compute_factorial_it(int n);
 
 int my_compute_factorial_rec(int n);
 
-int my_compute_square_root(int n);
+int my_sqrt(int nb);
 
 char *my_evil_str(char *str);
 
@@ -46,7 +50,7 @@ void my_print_revalpha(void);
 
 void my_putchar(char c);
 
-void my_putlong_base(long n, const char *base);
+int my_putlong_base(long long nbr, const char *base);
 
 void my_putnbr_base(int n, const char *base);
 
@@ -56,7 +60,7 @@ void my_putstr(const char *str);
 
 void my_revstr(char *str);
 
-void my_showmem(const char *str);
+int my_showmem(char *str, int size);
 
 void my_showstr(const char *str);
 
@@ -72,11 +76,11 @@ int is_digit(char c);
 
 char *my_strcapitalize(char *str);
 
-char *my_strcat(char *dest, const char *src);
+char *my_strcat(char *dest, const char *str);
 
 int my_strcmp(const char *s1, const char *s2);
 
-char *my_strcpy(const char *str);
+char *my_strcpy(char *dest, const char *src);
 
 int my_str_isalpha(const char *str);
 
@@ -96,7 +100,7 @@ int my_strlen(const char *str);
 
 int my_strlowcase(const char *str);
 
-char *my_strncat(char *dest, const char *src, int n);
+char *my_strncat(char *dest, const char *str, int n);
 
 int my_strncmp(const char *s1, const char *s2, int n);
 

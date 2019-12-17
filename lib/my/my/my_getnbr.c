@@ -24,7 +24,7 @@ static int parse(const char *str, int digit_count, int neg)
         }
         n += add;
 
-        if ((neg == -1 && n > 0) || neg == 1 && n < 0)
+        if ((neg == -1 && n > 0) || (neg == 1 && n < 0))
             return 0;
     }
     return n;
@@ -57,7 +57,7 @@ int my_getnbr(const char *str)
 
     for (int i = 0; 1; i++) {
         c = str[i];
-        if (c >= '0' && c <= '9' || c == '-' || c == '+') {
+        if ((c >= '0' && c <= '9') || c == '-' || c == '+') {
             if (start_index == -1)
                 start_index = i;
             count++;

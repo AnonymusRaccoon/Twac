@@ -6,6 +6,8 @@
 */
 #pragma once
 
+int my_printf(const char *str, ...);
+
 int count_valid_queens_placements(int n);
 
 char *my_strchr(const char *str, char c);

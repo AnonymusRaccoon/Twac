@@ -5,7 +5,7 @@
 ** Power calculator
 */
 
-int my_compute_power_it(int nb, int p)
+int my_pow(int nb, int p)
 {
     int ret = 1;
     int mult = 1;

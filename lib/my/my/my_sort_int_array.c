@@ -5,7 +5,7 @@
 ** Int array sorter
 */
 
-static int sort_linear(int *array, int size)
+static void sort_linear(int *array, int size)
 {
     for (int i = 0; i < size - 1; i++) {
         if (array[i] > array[i + 1]) {
@@ -20,4 +20,5 @@ int my_sort_int_array(int *array, int size)
 {
     for (int i = 0; i < size; i++)
         sort_linear(array, size);
+    return (0);
 }

@@ -5,7 +5,7 @@
 ** Square root calculator
 */
 
-int my_compute_square_root(int nb)
+int my_sqrt(int nb)
 {
     if (nb < 0)
         return 0;

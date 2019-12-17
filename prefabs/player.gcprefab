@@ -1,14 +1,17 @@
 <gc_entities>
     <gc_entity>
-        <TransformComponent>
+        <transform_component>
             <Position x="300" y="300" />
             <Size x="50" y="50" />
-        </TransformComponent>
-        <Renderer src="assets/sprites/grass.png">
+        </transform_component>
+        <renderer src="assets/sprites/grass.png">
             <Rect height="auto" width="auto" top="0" left="0" /> 
-        </Renderer>
-        <MovableComponent />
-        <ControllableComponent left="16" right="3" jump=" " speed="700" />
-        <GravityComponent speed="50" max_speed="100" />
+        </renderer>
+        <movable_component />
+        <controllable_component />
+        <gravity_component speed="50" />
+        <keyboard_controller left="16" right="3" jump="57" />
+        <walk_action speed="14000" max_speed="500" max_acceleration="14000" />
+        <friction_component value="1500" />
     </gc_entity>
 </gc_entities>

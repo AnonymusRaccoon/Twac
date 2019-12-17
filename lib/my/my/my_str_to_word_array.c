@@ -14,7 +14,6 @@ int first_alphanum(const char *str);
 static int count_words(const char *str)
 {
     int count = 1;
-    int word_length = 0;
 
     if (first_alphanum(str) == -1)
         return (0);
