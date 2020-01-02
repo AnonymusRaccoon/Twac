@@ -15,7 +15,7 @@ int usage(void)
 
 int main(int argc, char **argv)
 {
-    if (argc == 2 && my_strcmp(argv[1], "-h"))
+    if (argc != 2 || !my_strcmp(argv[1], "-h"))
         return (usage());
-    return (start_game());
+    return (start_game(argv[1]));
 }

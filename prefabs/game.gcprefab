@@ -1,4 +1,11 @@
 <gc_scene>
+    <textures>
+        <sprite src="assets/sprites/bck_layer1.png" />
+        <sprite src="assets/sprites/bck_layer2.png" />
+        <sprite src="assets/sprites/bck_layer3.png" />
+        <sprite src="assets/sprites/bck_layer4.png" />
+        <sprite src="assets/sprites/grass.png" />
+    </textures>
     <gc_entities>
         <gc_entity>
             <transform_component>

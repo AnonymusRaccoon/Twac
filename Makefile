@@ -6,8 +6,7 @@
 ##
 
 SRC = main.c \
-	src/game_loader.c \
-	src/scenes/game_scene.c
+	src/game_loader.c
 
 OBJ = $(SRC:%.c=%.o)
 
