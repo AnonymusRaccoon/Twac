@@ -14,5 +14,6 @@
         <walk_action acceleration="3000" max_acceleration="10000" />
         <jump_action acceleration="600" />
         <friction_component value=".7" />
+        <collision_component />
     </gc_entity>
 </gc_entities>

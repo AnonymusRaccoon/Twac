@@ -15,6 +15,8 @@ int usage(void)
 
 int main(int argc, char **argv)
 {
+    if (argc == 1)
+        return (start_game("prefabs/game.gcprefab"));
     if (argc != 2 || !my_strcmp(argv[1], "-h"))
         return (usage());
     return (start_game(argv[1]));
