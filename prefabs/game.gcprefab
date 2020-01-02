@@ -44,7 +44,7 @@
         <gc_entity>
             <transform_component>
                 <Position x="200" y="100" />
-                <Size x="500" y="50" />
+                <Size x="400" y="50" />
             </transform_component>
             <renderer src="assets/sprites/grass.png">
                 <Rect height="auto" width="auto" top="0" left="0" /> 
@@ -63,7 +63,7 @@
         </gc_entity>
         <gc_entity>
             <transform_component>
-                <Position x="700" y="400" />
+                <Position x="700" y="300" />
                 <Size x="100" y="300" />
             </transform_component>
             <renderer src="assets/sprites/grass.png">
