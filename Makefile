@@ -6,7 +6,11 @@
 ##
 
 SRC = main.c \
-	src/game_loader.c
+	src/game_loader.c \
+	src/components/walk_component.c \
+	src/components/jump_component.c \
+	src/systems/walk_system.c \
+	src/systems/jump_system.c
 
 OBJ = $(SRC:%.c=%.o)
 
