@@ -25,7 +25,7 @@ gc_entity *entity, float dtime)
     struct movable_component *mov = GETCMP(movable_component);
     struct jump_action *jump = GETCMP(jump_action);
 
-    if (col->distance_down == 0 && mov->acceleration.y < jump->max_acceleration)
+    if (col->distance_down == 0)
         mov->acceleration.y += con->jumping * jump->acceleration;
     (void)system;
     (void)dtime;

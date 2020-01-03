@@ -14,7 +14,6 @@ struct jump_action
 {
     gc_component base;
     int acceleration;
-    int max_acceleration;
 };
 
 extern const struct jump_action jump_action;
