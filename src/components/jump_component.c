@@ -24,6 +24,7 @@ static void fdctr(gc_scene *scene, void *component, node *n)
     struct jump_action *cmp = (struct jump_action *)component;
 
     cmp->acceleration = xml_getintprop(n, "acceleration");
+    cmp->counterforce = xml_getintprop(n, "counterforce");
     (void)scene;
 }
 
