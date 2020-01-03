@@ -29,8 +29,10 @@ gc_entity *entity, float dtime)
         else
             mov->acceleration.y = -grav->gravity_speed;
     }
-    if (mov->acceleration.y < 0 && col->distance_down == 0)
+    if (mov->acceleration.y < 0 && col->distance_down == 0) {
         mov->acceleration.y = 0;
+        mov->velocity.y = 0;
+    }
     (void)system;
     (void)dtime;
     (void)engine;
