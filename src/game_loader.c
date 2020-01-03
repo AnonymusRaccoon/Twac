@@ -8,15 +8,19 @@
 #include "engine.h"
 #include "runner.h"
 #include "prefab.h"
+#include "components/gravity_component.h"
 #include "components/walk_action.h"
 #include "components/jump_action.h"
+#include "systems/gravity_system.h"
 #include "systems/walk_system.h"
 #include "systems/jump_system.h"
 
 int register_customcmps(gc_engine *engine)
 {
+    engine->add_component(engine, &gravity_component);
     engine->add_component(engine, &walk_action);
     engine->add_component(engine, &jump_action);
+    engine->add_system(engine, &gravity_system);
     engine->add_system(engine, &walk_system);
     engine->add_system(engine, &jump_system);
     engine->finish_physics(engine);

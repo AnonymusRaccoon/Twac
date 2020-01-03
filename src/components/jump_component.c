@@ -24,6 +24,7 @@ static void fdctr(gc_scene *scene, void *component, node *n)
     struct jump_action *cmp = (struct jump_action *)component;
 
     cmp->acceleration = xml_getintprop(n, "acceleration");
+    cmp->max_acceleration = xml_getintprop(n, "max_acceleration");
     (void)scene;
 }
 
@@ -44,6 +45,7 @@ const struct jump_action jump_action = {
         size: sizeof(struct jump_action),
         dependencies: (char *[]){
             "controllable_component",
+            "collision_component",
             "movable_component",
             "transform_component",
             NULL

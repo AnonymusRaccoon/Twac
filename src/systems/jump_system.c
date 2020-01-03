@@ -10,26 +10,31 @@
 #include "texture.h"
 #include "vector2.h"
 #include "component.h"
+#include "components/collision_component.h"
 #include "components/movable_component.h"
 #include "components/controllable_component.h"
 #include "components/jump_action.h"
 #include "utility.h"
 #include <stddef.h>
 
-void update_entity(gc_engine *engine, void *system, \
+static void update_entity(gc_engine *engine, void *system, 
 gc_entity *entity, float dtime)
 {
+    struct collision_component *col = GETCMP(collision_component);
     struct controllable_component *con = GETCMP(controllable_component);
     struct movable_component *mov = GETCMP(movable_component);
     struct jump_action *jump = GETCMP(jump_action);
 
-    mov->acceleration.y += con->jumping * jump->acceleration;
+    if (con->jumping)
+        printf("Acceleartion: %4.0f, Velocity: %4.0f Distance down: %d\n", mov->acceleration.y, mov->velocity.y, col->distance_down);
+    if (col->distance_down == 0 && mov->acceleration.y < jump->max_acceleration)
+        mov->acceleration.y += con->jumping * jump->acceleration;
     (void)system;
     (void)dtime;
     (void)engine;
 }
 
-void destroy(void *system)
+static void destroy(void *system)
 {
     (void)system;
 }

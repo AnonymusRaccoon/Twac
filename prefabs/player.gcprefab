@@ -12,7 +12,7 @@
         <gravity_component speed="500" />
         <keyboard_controller left="16" right="3" jump="57" />
         <walk_action acceleration="3000" max_acceleration="10000" />
-        <jump_action acceleration="600" />
+        <jump_action acceleration="2400" max_acceleration="3800"/>
         <friction_component value=".7" />
         <collision_component />
     </gc_entity>
