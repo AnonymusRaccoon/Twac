@@ -6,6 +6,8 @@
 */
 #pragma once
 
+int my_str_islower_or_num(const char *str);
+
 int my_printf(const char *str, ...);
 
 void print_ptr(void *ptr);

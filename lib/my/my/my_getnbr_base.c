@@ -7,7 +7,7 @@
 
 int my_strlen(const char *str);
 
-int my_compute_power_it(int i, int p);
+int my_pow(int i, int p);
 
 static int indexof(char c, const char *str)
 {
@@ -29,7 +29,7 @@ static int parse(char *str, const char *base, long n, int i)
         neg = -1;
         i *= -1;
     }
-    power = my_compute_power_it(base_length, i - 1);
+    power = my_pow(base_length, i - 1);
     n += indexof(str[str_length - i], base) * power * neg;
     if ((n > 0 && neg < 0) || (n < 0 && neg > 0))
         return (0);
