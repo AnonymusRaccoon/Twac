@@ -30,7 +30,8 @@ gc_entity *entity, float dtime)
         jump->contered = false;
     } else if (!jump->contered && mov->acceleration.y > 0 && !con->jumping) {
         jump->contered = true;
-        mov->acceleration.y = MAX(mov->acceleration.y - jump->counterforce, 0);
+        if (mov->acceleration.y > 0)
+            mov->acceleration.y -= MIN(jump->counterforce, mov->acceleration.y);
     }
     (void)system;
     (void)dtime;

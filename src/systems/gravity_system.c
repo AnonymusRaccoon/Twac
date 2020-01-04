@@ -23,16 +23,7 @@ gc_entity *entity, float dtime)
     struct movable_component *mov = GETCMP(movable_component);
     struct collision_component *col = GETCMP(collision_component);
 
-    if (mov->acceleration.y > -grav->gravity_speed) {
-        if (mov->acceleration.y > 0)
-            mov->acceleration.y -= grav->gravity_speed;
-        else
-            mov->acceleration.y = -grav->gravity_speed;
-    }
-    if (mov->acceleration.y < 0 && col->distance_down == 0) {
-        mov->acceleration.y = 0;
-        mov->velocity.y = 0;
-    }
+    mov->acceleration.y -= grav->gravity_speed;
     (void)system;
     (void)dtime;
     (void)engine;
