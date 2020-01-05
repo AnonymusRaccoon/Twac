@@ -21,7 +21,6 @@ gc_entity *entity, float dtime)
 {
     struct gravity_component *grav = GETCMP(gravity_component);
     struct movable_component *mov = GETCMP(movable_component);
-    struct collision_component *col = GETCMP(collision_component);
 
     mov->acceleration.y -= grav->gravity_speed;
     (void)system;

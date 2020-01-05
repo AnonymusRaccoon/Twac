@@ -17,7 +17,7 @@
 #include "utility.h"
 #include <stddef.h>
 
-static void update_entity(gc_engine *engine, void *system, 
+static void update_entity(gc_engine *engine, void *system,
 gc_entity *entity, float dtime)
 {
     struct collision_component *col = GETCMP(collision_component);
