@@ -14,8 +14,6 @@ struct walk_action
 {
     gc_component base;
     int acceleration;
-    int max_acceleration;
-    int decceleration;
 };
 
 extern const struct walk_action walk_action;

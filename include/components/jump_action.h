@@ -16,6 +16,8 @@ struct jump_action
     int acceleration;
     int counterforce;
     bool contered;
+    int step;
+    int step_count;
 };
 
 extern const struct jump_action jump_action;

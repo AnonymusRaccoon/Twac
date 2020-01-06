@@ -9,10 +9,10 @@
         </renderer>
         <movable_component />
         <controllable_component />
-        <gravity_component speed="2000" />
+        <gravity_component force="6250" />
         <keyboard_controller left="16" right="3" jump="57" />
-        <walk_action acceleration="3000" max_acceleration="100" decceleration="100"/>
-        <jump_action acceleration="25000" counterforce="6000"/>
+        <walk_action acceleration="3000" />
+        <jump_action acceleration="17000" counterforce="6000" step_count="7"/>
         <collision_component layer="11000000" />
         <friction_component value=".5" />
     </gc_entity>

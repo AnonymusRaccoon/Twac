@@ -22,12 +22,11 @@ gc_entity *entity, float dtime)
     struct controllable_component *con = GETCMP(controllable_component);
     struct movable_component *mov = GETCMP(movable_component);
     struct walk_action *walk = GETCMP(walk_action);
-    gc_vector2 *acc = &mov->acceleration;
 
     if (con->moving_left)
-        acc->x -= walk->acceleration;
+        mov->acceleration.x -= walk->acceleration;
     if (con->moving_right)
-        acc->x += walk->acceleration;
+        mov->acceleration.x += walk->acceleration;
     (void)system;
     (void)dtime;
     (void)engine;

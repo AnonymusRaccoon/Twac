@@ -17,8 +17,6 @@ static void ctr(void *component, va_list args)
     struct walk_action *cmp = (struct walk_action *)component;
 
     cmp->acceleration = va_arg(args, int);
-    cmp->max_acceleration = va_arg(args, int);
-    cmp->decceleration = va_arg(args, int);
 }
 
 static void fdctr(gc_entity *entity, gc_scene *scene, void *component, node *n)
@@ -26,8 +24,6 @@ static void fdctr(gc_entity *entity, gc_scene *scene, void *component, node *n)
     struct walk_action *cmp = (struct walk_action *)component;
 
     cmp->acceleration = xml_getintprop(n, "acceleration");
-    cmp->max_acceleration = xml_getintprop(n, "max_acceleration");
-    cmp->decceleration = xml_getintprop(n, "decceleration");
     (void)scene;
     (void)entity;
 }
@@ -59,7 +55,5 @@ const struct walk_action walk_action = {
         serialize: &serialize,
         destroy: &component_destroy
     },
-    acceleration: 0,
-    max_acceleration: 0,
-    decceleration: 0
+    acceleration: 0
 };

@@ -25,13 +25,18 @@ gc_entity *entity, float dtime)
     struct movable_component *mov = GETCMP(movable_component);
     struct jump_action *jump = GETCMP(jump_action);
 
-    if (col->distance_down == 0) {
-        mov->acceleration.y += con->jumping * jump->acceleration;
+    if (col->distance_down == 0 && con->jumping) {
+        mov->acceleration.y += jump->acceleration;
         jump->contered = false;
-    } else if (!jump->contered && mov->acceleration.y > 0 && !con->jumping) {
+        jump->step = jump->step_count;
+    } else if (!jump->contered && mov->velocity.y > 0 && !con->jumping) {
         jump->contered = true;
-        if (mov->acceleration.y > 0)
-            mov->acceleration.y -= MIN(jump->counterforce, mov->acceleration.y);
+        jump->step = 0;
+    }
+
+    if (jump->step > 0) {
+        mov->acceleration.y += jump->acceleration;
+        jump->step--;
     }
     (void)system;
     (void)dtime;
