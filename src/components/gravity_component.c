@@ -11,7 +11,7 @@
 #include "utility.h"
 #include <stdlib.h>
 
-static void gravity_ctr(void *component, va_list args)
+static void ctr(void *component, va_list args)
 {
     struct gravity_component *cmp = (struct gravity_component *)component;
 
@@ -19,21 +19,22 @@ static void gravity_ctr(void *component, va_list args)
     cmp->max_speed = va_arg(args, int);
 }
 
-static void gravity_fdctr(gc_scene *scene, void *component, node *n)
+static void fdctr(gc_entity *entity, gc_scene *scene, void *component, node *n)
 {
     struct gravity_component *cmp = (struct gravity_component *)component;
 
     cmp->gravity_speed = xml_getintprop(n, "speed");
     cmp->max_speed = xml_getintprop(n, "max_speed");
     (void)scene;
+    (void)entity;
 }
 
-static void gravity_dtr(void *component)
+static void dtr(void *component)
 {
     (void)component;
 }
 
-static char *gravity_serialize(void *component)
+static char *serialize(void *component)
 {
     (void)component;
     return (NULL);
@@ -48,10 +49,10 @@ const struct gravity_component gravity_component = {
             "transform_component",
             NULL
         },
-        ctr: &gravity_ctr,
-        fdctr: &gravity_fdctr,
-        dtr: &gravity_dtr,
-        serialize: &gravity_serialize,
+        ctr: &ctr,
+        fdctr: &fdctr,
+        dtr: &dtr,
+        serialize: &serialize,
         destroy: &component_destroy
     },
     gravity_speed: 10

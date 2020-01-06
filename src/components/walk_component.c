@@ -12,7 +12,7 @@
 #include "utility.h"
 #include <stdlib.h>
 
-static void walk_ctr(void *component, va_list args)
+static void ctr(void *component, va_list args)
 {
     struct walk_action *cmp = (struct walk_action *)component;
 
@@ -21,7 +21,7 @@ static void walk_ctr(void *component, va_list args)
     cmp->decceleration = va_arg(args, int);
 }
 
-static void walk_fdctr(gc_scene *scene, void *component, node *n)
+static void fdctr(gc_entity *entity, gc_scene *scene, void *component, node *n)
 {
     struct walk_action *cmp = (struct walk_action *)component;
 
@@ -29,14 +29,15 @@ static void walk_fdctr(gc_scene *scene, void *component, node *n)
     cmp->max_acceleration = xml_getintprop(n, "max_acceleration");
     cmp->decceleration = xml_getintprop(n, "decceleration");
     (void)scene;
+    (void)entity;
 }
 
-static void walk_dtr(void *component)
+static void dtr(void *component)
 {
     (void)component;
 }
 
-static char *walk_serialize(void *component)
+static char *serialize(void *component)
 {
     (void)component;
     return (NULL);
@@ -52,10 +53,10 @@ const struct walk_action walk_action = {
             "transform_component",
             NULL
         },
-        ctr: &walk_ctr,
-        fdctr: &walk_fdctr,
-        dtr: &walk_dtr,
-        serialize: &walk_serialize,
+        ctr: &ctr,
+        fdctr: &fdctr,
+        dtr: &dtr,
+        serialize: &serialize,
         destroy: &component_destroy
     },
     acceleration: 0,

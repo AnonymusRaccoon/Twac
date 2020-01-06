@@ -20,7 +20,7 @@ static void ctr(void *component, va_list args)
     cmp->contered = false;
 }
 
-static void fdctr(gc_scene *scene, void *component, node *n)
+static void fdctr(gc_entity *entity, gc_scene *scene, void *component, node *n)
 {
     struct jump_action *cmp = (struct jump_action *)component;
 
@@ -28,6 +28,7 @@ static void fdctr(gc_scene *scene, void *component, node *n)
     cmp->counterforce = xml_getintprop(n, "counterforce");
     cmp->contered = false;
     (void)scene;
+    (void)entity;
 }
 
 static void dtr(void *component)
