@@ -54,6 +54,15 @@
         
         <gc_entity>
             <transform_component>
+                <Position x="-500" y="-200" />
+                <Size x="10000" y="10" />
+            </transform_component>
+            <collision_component layer="11000000" />
+            <kill_component />
+        </gc_entity>
+
+        <gc_entity>
+            <transform_component>
                 <Position x="200" y="100" />
                 <Size x="400" y="50" />
             </transform_component>
