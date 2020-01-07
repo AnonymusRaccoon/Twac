@@ -38,7 +38,7 @@ void walk_destroy(void *system)
 }
 
 const gc_system walk_system = {
-    name: "WalkSystem",
+    name: "walk_system",
     component_name: "walk_action",
     size: sizeof(gc_system),
     ctr: NULL,

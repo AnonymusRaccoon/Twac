@@ -49,7 +49,7 @@ static void destroy(void *system)
 }
 
 const gc_system jump_system = {
-    name: "JumpSystem",
+    name: "jump_system",
     component_name: "jump_action",
     size: sizeof(gc_system),
     ctr: NULL,

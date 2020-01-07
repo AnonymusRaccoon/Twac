@@ -15,5 +15,6 @@
         <jump_action acceleration="17000" counterforce="6000" step_count="7"/>
         <collision_component layer="11000000" />
         <friction_component value=".5" />
+        <camerafollow_component />
     </gc_entity>
 </gc_entities>

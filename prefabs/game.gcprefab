@@ -16,6 +16,7 @@
                 <Rect height="auto" width="auto" top="0" left="0" /> 
             </renderer>
             <parallax_component speed="60" />
+            <fixed_to_cam />
         </gc_entity>
         <gc_entity>
             <transform_component>
@@ -26,6 +27,7 @@
                 <Rect height="auto" width="auto" top="0" left="0" /> 
             </renderer>
             <parallax_component speed="90" />
+            <fixed_to_cam />
         </gc_entity>
         <gc_entity>
             <transform_component>
@@ -36,6 +38,7 @@
                 <Rect height="auto" width="auto" top="0" left="0" /> 
             </renderer>
             <parallax_component speed="100" />
+            <fixed_to_cam />
         </gc_entity>
         <gc_entity>
             <transform_component>
@@ -46,6 +49,7 @@
                 <Rect height="auto" width="auto" top="0" left="0" /> 
             </renderer>
             <parallax_component speed="120" />
+            <fixed_to_cam />
         </gc_entity>
         
         <gc_entity>

@@ -34,7 +34,7 @@ void gravity_destroy(void *system)
 }
 
 const gc_system gravity_system = {
-    name: "GravitySystem",
+    name: "gravity_system",
     component_name: "gravity_component",
     size: sizeof(gc_system),
     ctr: NULL,
