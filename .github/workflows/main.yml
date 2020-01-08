@@ -14,10 +14,9 @@ jobs:
         mkdir -p ~/.ssh
         echo -ne $SSH_PRIVATE_KEY >> ~/.ssh/blih
         chmod 400 ~/.ssh/blih
-        cat -e ~/.ssh/blih && echo toto
+        cat -e ~/.ssh/blih | wc -c && echo toto
         echo $TEST
         echo test2
-        cat $HOME/secrets/SSH_PRIVATE_KEY
         echo test3
         echo -ne "Host git.epitech.eu\n\tHostname git.epitech.eu\n\tUser git\n\tIdentityFile $(readlink -f ~/.ssh/blih)\n" >> ~/.ssh/config
         git config --global user.email "tristan.roux@epitech.eu"
