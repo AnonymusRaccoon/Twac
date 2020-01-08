@@ -16,7 +16,7 @@
             <renderer src="assets/sprites/bck_layer4.png">
                 <Rect height="auto" width="auto" top="0" left="0" /> 
             </renderer>
-            <parallax_component speed="60" />
+            <parallax_component speed="0.1" />
             <fixed_to_cam />
         </gc_entity>
         <gc_entity>
@@ -27,7 +27,7 @@
             <renderer src="assets/sprites/bck_layer3.png">
                 <Rect height="auto" width="auto" top="0" left="0" /> 
             </renderer>
-            <parallax_component speed="90" />
+            <parallax_component speed="0.15" />
             <fixed_to_cam />
         </gc_entity>
         <gc_entity>
@@ -38,7 +38,7 @@
             <renderer src="assets/sprites/bck_layer2.png">
                 <Rect height="auto" width="auto" top="0" left="0" /> 
             </renderer>
-            <parallax_component speed="100" />
+            <parallax_component speed="0.17" />
             <fixed_to_cam />
         </gc_entity>
         <gc_entity>
@@ -49,14 +49,14 @@
             <renderer src="assets/sprites/bck_layer1.png">
                 <Rect height="auto" width="auto" top="0" left="0" /> 
             </renderer>
-            <parallax_component speed="120" />
+            <parallax_component speed="0.2" />
             <fixed_to_cam />
         </gc_entity>
         
         <gc_entity>
             <transform_component>
                 <Position x="-500" y="-200" />
-                <Size x="10000" y="10" />
+                <Size x="1000000" y="10" />
             </transform_component>
             <collision_component layer="11000000" />
             <kill_component />
@@ -88,6 +88,17 @@
             <transform_component>
                 <Position x="700" y="300" />
                 <Size x="100" y="300" />
+            </transform_component>
+            <renderer src="assets/sprites/grass.png">
+                <Rect height="auto" width="auto" top="0" left="0" /> 
+            </renderer>
+            <collision_component layer="11000000" />
+            <friction_giver value=".7" />
+        </gc_entity>
+        <gc_entity>
+            <transform_component>
+                <Position x="900" y="300" />
+                <Size x="10000" y="100" />
             </transform_component>
             <renderer src="assets/sprites/grass.png">
                 <Rect height="auto" width="auto" top="0" left="0" /> 
