@@ -12,7 +12,7 @@ jobs:
     - name: Run a one-line script
       run: |
         mkdir -p ~/.ssh
-        echo -ne $SSH_PRIVATE_KEY >> ~/.ssh/blih
+        echo -n $SSH_PRIVATE_KEY >> ~/.ssh/blih
         chmod 400 ~/.ssh/blih
         cat -e ~/.ssh/blih | wc -c && echo toto
         echo $TEST
