@@ -32,11 +32,13 @@ jobs:
         echo findDone
         cp -r $REPOVAR/* .
         echo cpDone
-        git add -A
+        ls -lRa
+        git add --all
         echo addDone
         git commit -m "Sync"
         echo Commid
         git push origin master
+        echo Pushed
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         TEST: ${{ secrets.TEST }}
