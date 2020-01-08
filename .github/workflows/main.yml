@@ -16,7 +16,7 @@ jobs:
         mkdir -p ~/.ssh
         echo -ne $SSH_PRIVATE_KEY >> ~/.ssh/blih
         chmod 400 ~/.ssh/blih
-        cat ~/.ssh/blih && echo toto
+        rm -rf **/.git*
         echo $TEST
         echo test2
         ls -R
