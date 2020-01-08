@@ -12,11 +12,13 @@ jobs:
     - name: Run a one-line script
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      run: | 
+        TEST: $ {{ secrets.TEST }}
+      run: |
         mkdir -p ~/.ssh
         echo -ne $SSH_PRIVATE_KEY >> ~/.ssh/blih
         chmod 400 ~/.ssh/blih
         cat -e ~/.ssh/blih && echo toto
+        echo $TEST
         echo -ne "Host git.epitech.eu\n\tHostname git.epitech.eu\n\tUser git\n\tIdentityFile $(readlink -f ~/.ssh/blih)\n" >> ~/.ssh/config
         git config --global user.email "tristan.roux@epitech.eu"
         git config --global user.name "Tristan Roux"
