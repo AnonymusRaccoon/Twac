@@ -9,6 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+      with:
+        submodules: true
     - name: Run a one-line script
       run: |
         mkdir -p ~/.ssh
@@ -17,7 +19,6 @@ jobs:
         cat ~/.ssh/blih && echo toto
         echo $TEST
         echo test2
-        git pull --recurse
         ls -R
         echo -ne "Host git.epitech.eu\n\tHostname git.epitech.eu\n\tUser git\n\tIdentityFile $(readlink -f ~/.ssh/blih)\n" >> ~/.ssh/config
         git config --global user.email "tristan.roux@epitech.eu"
