@@ -22,7 +22,7 @@ static void on_collide(gc_engine *engine, gc_entity *entity, int id)
         return;
     cmp->live--;
     if (cmp->live < 0) {
-        exit(0); //SHOULD CHANGE THAT TO A SWITCH TO THE MENU
+        exit(0);
     } else {
         trans->position = cmp->spawn_position;
     }
