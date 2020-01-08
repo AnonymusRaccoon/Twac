@@ -56,6 +56,10 @@ int start_game(const char *map)
         return (ERROR);
     while (engine->is_open(engine)) {
         engine->game_loop(engine, sfTime_asSeconds(sfClock_restart(clock)));
+        if (engine->is_keypressed(sfKeyEscape)) {
+            prefab_load(engine, "prefabs/pause.gcprefab");
+            sfClock_restart(clock);
+        }
     }
     engine->destroy(engine);
     sfClock_destroy(clock);

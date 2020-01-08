@@ -6,6 +6,7 @@
         <sprite src="assets/sprites/bck_layer4.png" />
         <sprite src="assets/sprites/grass.png" />
     </textures>
+    <music src="assets/musics/music.ogg"/>
     <gc_entities>
         <gc_entity>
             <transform_component>
