@@ -2,10 +2,10 @@
     <gc_entity id="25">
         <transform_component>
             <Position x="300" y="300" />
-            <Size x="50" y="50" />
+            <Size x="40" y="50" />
         </transform_component>
-        <renderer src="assets/sprites/grass.png">
-            <Rect height="auto" width="auto" top="0" left="0" /> 
+        <renderer src="assets/sprites/player_sheet.png">
+            <Rect width="80" height="100" top="0" left="0" /> 
         </renderer>
         <movable_component />
         <controllable_component />

@@ -5,6 +5,7 @@
         <sprite src="assets/sprites/bck_layer3.png" />
         <sprite src="assets/sprites/bck_layer4.png" />
         <sprite src="assets/sprites/grass.png" />
+        <sprite src="assets/sprites/player_sheet.png" />
     </textures>
     <music src="assets/musics/music.ogg"/>
     <gc_entities>
