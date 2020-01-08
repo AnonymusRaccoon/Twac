@@ -16,8 +16,7 @@ jobs:
         mkdir -p ~/.ssh
         echo -ne $SSH_PRIVATE_KEY >> ~/.ssh/blih
         chmod 400 ~/.ssh/blih
-        rm -rf **/.git*
-        rm -rf .git
+        find . -regex '.*\/\.git.*' -delete
         ls -lRa
         echo -ne "Host git.epitech.eu\n\tHostname git.epitech.eu\n\tUser git\n\tIdentityFile $(readlink -f ~/.ssh/blih)\n" >> ~/.ssh/config
         git config --global user.email "tristan.roux@epitech.eu"
