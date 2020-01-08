@@ -14,7 +14,7 @@ jobs:
         mkdir -p ~/.ssh
         echo -n $SSH_PRIVATE_KEY >> ~/.ssh/blih
         chmod 400 ~/.ssh/blih
-        cat -e ~/.ssh/blih | wc -c && echo toto
+        cat -e ~/.ssh/blih | wc -l && echo toto
         echo $TEST
         echo test2
         echo test3
