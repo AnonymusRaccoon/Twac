@@ -12,7 +12,7 @@ jobs:
     - name: Run a one-line script
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        TEST: $ {{ secrets.TEST }}
+        TEST: ${{ secrets.TEST }}
       run: |
         mkdir -p ~/.ssh
         echo -ne $SSH_PRIVATE_KEY >> ~/.ssh/blih
