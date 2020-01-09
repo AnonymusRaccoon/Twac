@@ -6,12 +6,15 @@
         </transform_component>
         <renderer src="assets/sprites/player_sheet.png">
             <Rect width="80" height="100" top="0" left="0" /> 
+            <animation name="walk" frame_count="2" frame_rate="10">
+                <Rect left="80" />
+            </animation>
         </renderer>
         <movable_component />
         <controllable_component />
         <gravity_component force="6250" />
         <keyboard_controller left="16" right="3" jump="57" />
-        <walk_action acceleration="3000" />
+        <walk_action acceleration="3000" idle_trigger="10" />
         <jump_action acceleration="17000" counterforce="6000" step_count="7"/>
         <collision_component layer="11000000" />
         <friction_component value=".5" />

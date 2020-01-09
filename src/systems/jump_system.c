@@ -33,7 +33,6 @@ gc_entity *entity, float dtime)
         jump->contered = true;
         jump->step = 0;
     }
-
     if (jump->step > 0) {
         mov->acceleration.y += jump->acceleration;
         jump->step--;

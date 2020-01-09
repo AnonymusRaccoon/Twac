@@ -14,6 +14,7 @@ struct walk_action
 {
     gc_component base;
     int acceleration;
+    int idle;
 };
 
 extern const struct walk_action walk_action;
