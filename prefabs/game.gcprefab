@@ -62,6 +62,14 @@
             <collision_component layer="11000000" />
             <kill_component />
         </gc_entity>
+        <gc_entity>
+            <transform_component>
+                <Position x="1000" y="400" />
+                <Size x="1" y="1000" />
+            </transform_component>
+            <collision_component layer="11000000" />
+            <win_component />
+        </gc_entity>
 
         <gc_entity>
             <transform_component>

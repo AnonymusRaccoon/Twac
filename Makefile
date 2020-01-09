@@ -12,6 +12,7 @@ SRC = main.c \
 	src/components/jump_component.c \
 	src/components/live_component.c \
 	src/components/kill_component.c \
+	src/components/win_component.c \
 	src/systems/gravity_system.c \
 	src/systems/walk_system.c \
 	src/systems/jump_system.c

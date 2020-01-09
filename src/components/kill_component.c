@@ -22,7 +22,7 @@ const struct kill_component kill_component = {
         name: "kill_component",
         size: sizeof(struct kill_component),
         dependencies: (char *[]){
-            "movable_component",
+            "collision_component",
             "transform_component",
             NULL
         },

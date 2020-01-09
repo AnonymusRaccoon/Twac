@@ -10,6 +10,7 @@
 #include "components/live_component.h"
 #include "components/collision_component.h"
 #include "components/transform_component.h"
+#include "components/win_component.h"
 #include "utility.h"
 #include <stdlib.h>
 
@@ -18,13 +19,16 @@ static void on_collide(gc_engine *engine, gc_entity *entity, int id)
     struct live_component *cmp = GETCMP(live_component);
     struct transform_component *trans = GETCMP(transform_component);
 
-    if (!GETCOLCMP(kill_component))
-        return;
-    cmp->live--;
-    if (cmp->live < 0) {
+    if (GETCOLCMP(kill_component)) {
+        cmp->live--;
+        if (cmp->live < 0) {
+            exit(0);
+        } else {
+            trans->position = cmp->spawn_position;
+        }
+    }
+    if (GETCOLCMP(win_component)) {
         exit(0);
-    } else {
-        trans->position = cmp->spawn_position;
     }
 }
 

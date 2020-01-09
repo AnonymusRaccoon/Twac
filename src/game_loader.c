@@ -13,6 +13,7 @@
 #include "components/jump_action.h"
 #include "components/live_component.h"
 #include "components/kill_component.h"
+#include "components/win_component.h"
 #include "systems/gravity_system.h"
 #include "systems/walk_system.h"
 #include "systems/jump_system.h"
@@ -28,6 +29,7 @@ int register_customcmps(gc_engine *engine)
     engine->finish_physics(engine);
     engine->add_component(engine, &live_component);
     engine->add_component(engine, &kill_component);
+    engine->add_component(engine, &win_component);
     return (0);
 }
 
