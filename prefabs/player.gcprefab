@@ -7,7 +7,10 @@
         <renderer src="assets/sprites/player_sheet.png">
             <Rect width="80" height="100" top="0" left="0" /> 
             <animation name="walk" frame_count="2" frame_rate="10">
-                <Rect left="80" />
+                <Rect left="410" />
+            </animation>
+            <animation name="jump" frame_count="1" frame_rate="10">
+                <Rect left="160" />
             </animation>
         </renderer>
         <movable_component />

@@ -14,16 +14,19 @@
 #include "components/movable_component.h"
 #include "components/controllable_component.h"
 #include "components/jump_action.h"
+#include "components/renderer.h"
 #include "utility.h"
 #include <stddef.h>
 
-static void update_entity(gc_engine *engine, void *system,
-gc_entity *entity, float dtime)
+static void update_entity(gc_engine *engine __attribute__((unused)), \
+void *system __attribute__((unused)), gc_entity *entity, \
+float dtime __attribute__((unused)))
 {
     struct collision_component *col = GETCMP(collision_component);
     struct controllable_component *con = GETCMP(controllable_component);
     struct movable_component *mov = GETCMP(movable_component);
     struct jump_action *jump = GETCMP(jump_action);
+    struct renderer *rend = GETCMP(renderer);
 
     if (col->distance_down == 0 && con->jumping) {
         mov->acceleration.y += jump->acceleration;
@@ -37,9 +40,8 @@ gc_entity *entity, float dtime)
         mov->acceleration.y += jump->acceleration;
         jump->step--;
     }
-    (void)system;
-    (void)dtime;
-    (void)engine;
+    if (rend && rend->type == GC_ANIMREND && col->distance_down != 0)
+        rend_set_anim(rend, "jump");
 }
 
 static void destroy(void *system)
