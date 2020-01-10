@@ -6,6 +6,7 @@
 */
 
 #include "engine.h"
+#include "components/renderer.h"
 #include "runner.h"
 #include "prefab.h"
 #include "components/gravity_component.h"
@@ -14,9 +15,11 @@
 #include "components/live_component.h"
 #include "components/kill_component.h"
 #include "components/win_component.h"
+#include "components/timer_component.h"
 #include "systems/gravity_system.h"
 #include "systems/walk_system.h"
 #include "systems/jump_system.h"
+#include "systems/timer_system.h"
 #include <SFML/System.h>
 #include <SFML/Window.h>
 
@@ -28,10 +31,12 @@ int register_customcmps(gc_engine *engine)
     engine->add_system(engine, &gravity_system);
     engine->add_system(engine, &walk_system);
     engine->add_system(engine, &jump_system);
+    engine->add_system(engine, &timer_system);
     engine->finish_physics(engine);
     engine->add_component(engine, &live_component);
     engine->add_component(engine, &kill_component);
     engine->add_component(engine, &win_component);
+    engine->add_component(engine, &timer_component);
     return (0);
 }
 
