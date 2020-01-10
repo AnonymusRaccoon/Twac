@@ -1,13 +1,13 @@
 <gc_scene>
-    <textures>
+    <data>
         <sprite src="assets/sprites/bck_layer1.png" />
         <sprite src="assets/sprites/bck_layer2.png" />
         <sprite src="assets/sprites/bck_layer3.png" />
         <sprite src="assets/sprites/bck_layer4.png" />
         <sprite src="assets/sprites/grass.png" />
         <sprite src="assets/sprites/player_sheet.png" />
-    </textures>
-    <music src="assets/musics/music.ogg"/>
+        <music src="assets/musics/music.ogg"/>
+    </data>
     <gc_entities>
         <gc_entity>
             <transform_component>
@@ -53,6 +53,8 @@
             <parallax_component speed="0.2" />
             <fixed_to_cam />
         </gc_entity>
+
+       
         
         <gc_entity>
             <transform_component>

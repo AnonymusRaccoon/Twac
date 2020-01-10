@@ -8,7 +8,6 @@
 
 #include "entity.h"
 #include "system.h"
-#include "texture.h"
 #include "vector2.h"
 #include "utility.h"
 #include "components/movable_component.h"

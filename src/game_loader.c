@@ -17,6 +17,8 @@
 #include "systems/gravity_system.h"
 #include "systems/walk_system.h"
 #include "systems/jump_system.h"
+#include <SFML/System.h>
+#include <SFML/Window.h>
 
 int register_customcmps(gc_engine *engine)
 {

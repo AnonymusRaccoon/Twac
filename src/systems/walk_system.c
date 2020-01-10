@@ -7,15 +7,14 @@
 
 #include "entity.h"
 #include "system.h"
-#include "texture.h"
 #include "vector2.h"
-#include "sprite.h"
 #include "component.h"
 #include "components/movable_component.h"
 #include "components/controllable_component.h"
 #include "components/walk_action.h"
 #include "components/renderer.h"
 #include "utility.h"
+#include "sprite.h"
 #include <stddef.h>
 
 void walk_update_entity(gc_engine *engine __attribute__((unused)), \
