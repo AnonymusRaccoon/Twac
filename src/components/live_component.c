@@ -22,13 +22,13 @@ static void on_collide(gc_engine *engine, gc_entity *entity, int id)
     if (GETCOLCMP(kill_component)) {
         cmp->live--;
         if (cmp->live < 0) {
-            exit(0);
+            engine->should_close = true;
         } else {
             trans->position = cmp->spawn_position;
         }
     }
     if (GETCOLCMP(win_component)) {
-        exit(0);
+        engine->should_close = true;
     }
 }
 

@@ -56,16 +56,12 @@
         </gc_entity>
 
         <gc_entity id="50">
-            <transform_component>
-                <Position x="500" y="-200" />
-                <Size x="1000000" y="10" />
-            </transform_component>
+            <transform_component />
             <renderer text="" />
-            <collision_component layer="00000000" />
             <fixed_to_cam />
             <timer_component time="60"/>
         </gc_entity>
-        
+
         <gc_entity>
             <transform_component>
                 <Position x="-500" y="-200" />

@@ -23,6 +23,8 @@ gc_entity *entity, float dtime)
     if (!rend || rend->type != GC_TXTREND)
         return;
     timer->time_left -= dtime;
+    if (((gc_text *)rend->data)->text)
+        free(((gc_text *)rend->data)->text);
     ((gc_text *)rend->data)->text = tostr((int)timer->time_left);
     (void)system;
     (void)engine;
