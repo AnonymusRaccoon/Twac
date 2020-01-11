@@ -59,7 +59,7 @@
             <transform_component />
             <renderer text="" />
             <fixed_to_cam />
-            <timer_component time="60"/>
+            <timer_component time="10"/>
         </gc_entity>
 
         <gc_entity>
