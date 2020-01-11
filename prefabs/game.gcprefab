@@ -70,14 +70,6 @@
             <collision_component layer="11000000" />
             <kill_component />
         </gc_entity>
-        <gc_entity>
-            <transform_component>
-                <Position x="1000" y="400" />
-                <Size x="1" y="1000" />
-            </transform_component>
-            <collision_component layer="11000000" />
-            <win_component />
-        </gc_entity>
 
         <gc_entity>
             <transform_component>
@@ -114,14 +106,80 @@
         </gc_entity>
         <gc_entity>
             <transform_component>
-                <Position x="900" y="300" />
-                <Size x="10000" y="100" />
+                <Position x="800" y="100" />
+                <Size x="50" y="150" />
             </transform_component>
             <renderer src="assets/sprites/grass.png">
                 <Rect height="auto" width="auto" top="0" left="0" /> 
             </renderer>
             <collision_component layer="11000000" />
             <friction_giver value=".7" />
+        </gc_entity>
+
+        <gc_entity>
+            <transform_component>
+                <Position x="900" y="-100" />
+                <Size x="10" y="100" />
+            </transform_component>
+            <renderer src="assets/sprites/grass.png">
+                <Rect height="auto" width="auto" top="0" left="0" /> 
+            </renderer>
+            <collision_component layer="11000000" />
+            <friction_giver value=".7" />
+        </gc_entity>
+        <gc_entity>
+            <transform_component>
+                <Position x="1000" y="-100" />
+                <Size x="10" y="100" />
+            </transform_component>
+            <renderer src="assets/sprites/grass.png">
+                <Rect height="auto" width="auto" top="0" left="0" /> 
+            </renderer>
+            <collision_component layer="11000000" />
+            <friction_giver value=".7" />
+        </gc_entity>
+        <gc_entity>
+            <transform_component>
+                <Position x="1300" y="-100" />
+                <Size x="300" y="100" />
+            </transform_component>
+            <renderer src="assets/sprites/grass.png">
+                <Rect height="auto" width="auto" top="0" left="0" /> 
+            </renderer>
+            <collision_component layer="11000000" />
+            <friction_giver value=".7" />
+        </gc_entity>
+
+        <gc_entity>
+            <transform_component>
+                <Position x="1700" y="100" />
+                <Size x="100" y="500" />
+            </transform_component>
+            <renderer src="assets/sprites/grass.png">
+                <Rect height="auto" width="auto" top="0" left="0" /> 
+            </renderer>
+            <collision_component layer="11000000" />
+            <friction_giver value=".7" />
+        </gc_entity>
+
+        <gc_entity>
+            <transform_component>
+                <Position x="2050" y="225" />
+                <Size x="1000" y="100" />
+            </transform_component>
+            <renderer src="assets/sprites/grass.png">
+                <Rect height="auto" width="auto" top="0" left="0" /> 
+            </renderer>
+            <collision_component layer="11000000" />
+            <friction_giver value=".7" />
+        </gc_entity>
+        <gc_entity>
+            <transform_component>
+                <Position x="2300" y="700" />
+                <Size x="1" y="1000" />
+            </transform_component>
+            <collision_component layer="11000000" />
+            <win_component />
         </gc_entity>
     </gc_entities>
 </gc_scene>

@@ -10,7 +10,9 @@
 
 int usage(void)
 {
-    return (ERROR);
+    my_printf("My runner:\n\n\tUsage: %s [path_to_map]. \
+If no map are specified, the default one is loaded.\n");
+    return (0);
 }
 
 int main(int argc, char **argv)
