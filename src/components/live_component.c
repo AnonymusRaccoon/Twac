@@ -11,26 +11,44 @@
 #include "components/collision_component.h"
 #include "components/transform_component.h"
 #include "components/win_component.h"
+#include "components/controllable_component.h"
+#include "components/timer_component.h"
 #include "utility.h"
 #include "prefab.h"
 #include <stdlib.h>
+
+void reset_timer(gc_scene *scene)
+{
+    gc_entity *entity = scene->get_entity(scene, 50);
+    struct timer_component *timer;
+
+    if (!entity)
+        return;
+    timer = GETCMP(timer_component);
+    timer->time_left = timer->default_value;
+}
 
 static void on_collide(gc_engine *engine, gc_entity *entity, int id)
 {
     struct live_component *cmp = GETCMP(live_component);
     struct transform_component *trans = GETCMP(transform_component);
+    struct controllable_component *con = GETCMP(controllable_component);
 
     if (GETCOLCMP(kill_component)) {
         cmp->live--;
-        if (cmp->live < 0) {
+        if (cmp->live == 0) {
             engine->should_close = true;
         } else {
             trans->position = cmp->spawn_position;
+            reset_timer(engine->scene);
         }
     }
     if (GETCOLCMP(win_component)) {
         prefab_load(engine, "prefabs/winscreen.gcprefab");
         entity->remove_component(engine->scene, entity, "keyboard_controller");
+        con->jumping = false;
+        con->moving_left = false;
+        con->moving_right = false;
     }
 }
 

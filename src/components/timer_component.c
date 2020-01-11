@@ -15,6 +15,7 @@ static void ctr(void *component, va_list args)
     struct timer_component *cmp = (struct timer_component *)component;
 
     cmp->time_left = va_arg(args, double);
+    cmp->default_value = cmp->time_left;
 }
 
 static void fdctr(gc_entity *entity, gc_scene *scene, void *component, node *n)
@@ -22,6 +23,7 @@ static void fdctr(gc_entity *entity, gc_scene *scene, void *component, node *n)
     struct timer_component *cmp = (struct timer_component *)component;
 
     cmp->time_left = xml_getintprop(n, "time");
+    cmp->default_value = cmp->time_left;
     (void)entity;
     (void)scene;
 }
