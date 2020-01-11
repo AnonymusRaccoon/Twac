@@ -12,6 +12,7 @@
 #include "components/transform_component.h"
 #include "components/win_component.h"
 #include "utility.h"
+#include "prefab.h"
 #include <stdlib.h>
 
 static void on_collide(gc_engine *engine, gc_entity *entity, int id)
@@ -28,7 +29,8 @@ static void on_collide(gc_engine *engine, gc_entity *entity, int id)
         }
     }
     if (GETCOLCMP(win_component)) {
-        engine->should_close = true;
+        prefab_load(engine, "prefabs/winscreen.gcprefab");
+        entity->remove_component(engine->scene, entity, "keyboard_controller");
     }
 }
 

@@ -1,0 +1,9 @@
+<gc_entities>
+    <gc_entity>
+        <transform_component />
+        <renderer text="Congratulation, you won." />
+        <fixed_to_cam>
+            <Position x="200" y="100" />
+        </fixed_to_cam>
+    </gc_entity>
+</gc_entities>
