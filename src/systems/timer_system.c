@@ -14,6 +14,8 @@
 #include "text.h"
 #include <stdlib.h>
 
+void live_collide(gc_engine *engine, gc_entity *entity, int id);
+
 static void update_entity(gc_engine *engine, void *system, \
 gc_entity *entity, float dtime)
 {
@@ -23,11 +25,17 @@ gc_entity *entity, float dtime)
     if (!rend || rend->type != GC_TXTREND)
         return;
     timer->time_left -= dtime;
-    if (((gc_text *)rend->data)->text)
-        free(((gc_text *)rend->data)->text);
-    ((gc_text *)rend->data)->text = tostr((int)timer->time_left);
+    if (timer->time_left <= 0) {
+        entity = engine->scene->get_entity(engine->scene, 25);
+        if (!entity || !entity->get_component(entity, "keyboard_controller"))
+            return;
+        live_collide(engine, entity, -1);
+    } else {
+        if (((gc_text *)rend->data)->text)
+            free(((gc_text *)rend->data)->text);
+        ((gc_text *)rend->data)->text = tostr((int)timer->time_left);
+    }
     (void)system;
-    (void)engine;
 }
 
 static void destroy(void *system)

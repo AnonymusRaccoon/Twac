@@ -13,7 +13,7 @@ int usage(const char *bin)
     my_printf("My runner:\n\n\tUsage: %s [path_to_map]. \
 If no map are specified, the default one is loaded.\n\n\
 Moves:\n\tQ or D to move to the left or right\n\t\
-SPACE to jump\n", bin);
+SPACE to jump (you can release the jump before the end to jump lower)\n", bin);
     return (0);
 }
 

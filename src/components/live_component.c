@@ -28,13 +28,20 @@ void reset_timer(gc_scene *scene)
     timer->time_left = timer->default_value;
 }
 
-static void on_collide(gc_engine *engine, gc_entity *entity, int id)
+void live_collide(gc_engine *engine, gc_entity *entity, int id)
 {
     struct live_component *cmp = GETCMP(live_component);
     struct transform_component *trans = GETCMP(transform_component);
     struct controllable_component *con = GETCMP(controllable_component);
 
-    if (GETCOLCMP(kill_component)) {
+    if (GETCOLCMP(win_component)) {
+        prefab_load(engine, "prefabs/winscreen.gcprefab");
+        entity->remove_component(engine->scene, entity, "keyboard_controller");
+        con->jumping = false;
+        con->moving_left = false;
+        con->moving_right = false;
+    }
+    else if (GETCOLCMP(kill_component) || id == -1) {
         cmp->live--;
         if (cmp->live == 0) {
             engine->should_close = true;
@@ -42,13 +49,6 @@ static void on_collide(gc_engine *engine, gc_entity *entity, int id)
             trans->position = cmp->spawn_position;
             reset_timer(engine->scene);
         }
-    }
-    if (GETCOLCMP(win_component)) {
-        prefab_load(engine, "prefabs/winscreen.gcprefab");
-        entity->remove_component(engine->scene, entity, "keyboard_controller");
-        con->jumping = false;
-        con->moving_left = false;
-        con->moving_right = false;
     }
 }
 
@@ -63,7 +63,7 @@ static void ctr(void *component, va_list args)
         col = GETCMP(collision_component);
         trans = GETCMP(transform_component);
         if (col)
-            add_on_collide(col, &on_collide);
+            add_on_collide(col, &live_collide);
         if (trans)
             cmp->spawn_position = trans->position;
     }
@@ -84,7 +84,7 @@ live component after the collision component.\n"));
         return ((void)my_printf("Collision not yet setup, you should place the \
 live component after the collision component.\n"));
     cmp->spawn_position = trans->position;
-    add_on_collide(col, &on_collide);
+    add_on_collide(col, &live_collide);
     (void)scene;
 }
 
